@@ -780,3 +780,31 @@ for (var di = 1; di <= maxDescriptionTexts; di++) {
 	})(di);
 }
 generateExport();
+/*-- Export Button: Copy to Clipboard --*/
+document.getElementById("exportBtn").addEventListener("click", async function() {
+	if (typeof generateExport === "function") {
+		generateExport();
+	}
+	if (!exportXml) {
+		return;
+	}
+	try {
+		if (navigator.clipboard && navigator.clipboard.writeText) {
+			await navigator.clipboard.writeText(exportXml);
+		} else {
+			var ta = document.createElement("textarea");
+			ta.value = exportXml;
+			ta.style.position = "fixed";
+			ta.style.left = "-9999px";
+			document.body.appendChild(ta);
+			ta.focus();
+			ta.select();
+			document.execCommand("copy");
+			document.body.removeChild(ta);
+		}
+		alert("Export copied to clipboard.");
+	} catch (e) {
+		console.error(e);
+		alert("Unable to copy to clipboard. You can copy manually from the Export panel.");
+	}
+});
