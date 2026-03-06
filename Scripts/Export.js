@@ -541,7 +541,7 @@ function generateExport() {
 	let xml = "";
 	xml += indent2 + "<" + b.tag + ">\n";
 	xml += indent3 + '<name type="string">' + b.name + "</name>\n";
-	xml += indent3 + '<noid_name type="string">' + b.noidName + "</noid_name>\n";
+	xml += indent3 + '<nonid_name type="string">' + b.noidName + "</nonid_name>\n";
 	xml += indent3 + '<isidentified type="number">' + b.isIdentified + "</isidentified>\n";
 	xml += indent3 + '<size type="string">' + b.size + "</size>\n";
 	xml += indent3 + '<type type="string">' + (b.isLair ? "Lair" : b.type) + "</type>\n";
@@ -808,4 +808,5 @@ document.getElementById("exportBtn").addEventListener("click", async function() 
 		alert("Unable to copy to clipboard. You can copy manually from the Export panel.");
 	}
 });
+
 
