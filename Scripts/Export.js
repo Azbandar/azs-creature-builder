@@ -573,7 +573,7 @@ function generateExport() {
 	xml += indent3 + '<xp type="number">' + b.xp + "</xp>\n";
 	xml += indent3 + '<token type="token">tokens/' + imageBaseName + ".png" + "</token>\n";
 	xml += indent3 + '<picture type="token">images/' + imageBaseName + ".png" + "</picture>\n";
-	xml += indent3 + '<token3Dflat type="token">tokens/' + imageBaseName + ".png" + "</token3dflat>\n";
+	xml += indent3 + '<token3Dflat type="token">tokens/' + imageBaseName + ".png" + "</token3Dflat>\n";
 	xml += indent3 + '<locked type="number">1' + "</locked>\n";
 	xml += indent3 + '<version type="string">2024' + "</version>\n";
 	xml += buildCombatSection("trait", "traits", "traits-qty");
@@ -592,7 +592,7 @@ function generateExport() {
 	xml += indent4 + '<level7 type="number">0' + "</level7>\n";
 	xml += indent4 + '<level8 type="number">0' + "</level8>\n";
 	xml += indent4 + '<level9 type="number">0' + "</level9>\n";
-	xml += indent3 + "</splellslots>\n";
+	xml += indent3 + "</spellslots>\n";
 	xml += indent3 + "<spells />\n";
 	xml += buildCombatSection("spell", "innatespells", "spells-qty");
 	xml += buildEffects(b.nameRaw);
@@ -808,3 +808,4 @@ document.getElementById("exportBtn").addEventListener("click", async function() 
 		alert("Unable to copy to clipboard. You can copy manually from the Export panel.");
 	}
 });
+
