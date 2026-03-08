@@ -9,7 +9,7 @@ var maxReactions = 2;
 var maxLegendaryActions = 4;
 var maxLairActions = 2;
 var maxDescriptionTexts = 4;
-var maxEffects = 4;
+var maxEffects = 6;
 /*-- Dropdown Lists --*/
 var sizeList = ['Tiny', 'Small', 'Medium', 'Large', 'Huge', 'Gargantuan'];
 var typeList = ['Aberration', 'Beast', 'Celestial', 'Construct', 'Dragon', 'Elemental', 'Fey', 'Fiend', 'Giant', 'Humanoid', 'Monstrosity', 'Ooze', 'Plant', 'Trap', 'Undead'];
@@ -602,4 +602,5 @@ document.getElementById('themeBtn').addEventListener('click', function() {
 })();
 document.getElementById('theme-closeBtn').addEventListener('click', function() {
 	document.getElementById('theme-panel').style.display = 'none';
+
 });
