@@ -9865,6 +9865,556 @@
 									<textarea class="input-unlabeled text-left placeholder-left" style="width:calc(100% - 3px); height:65px; resize:none; box-sizing:border-box; padding:5px 5px 0 5px;" placeholder="Stylized Description" id="effect4-stylized" readonly></textarea>
 								</div>
 							</div>
+							<!-- effect5 -->
+							<div id="effect5" class="sub-container" style="display:none;">
+								<!-- Name Row -->
+								<div id="effect5-namerow" style="display:flex; flex-wrap:nowrap; align-items:center; justify-content:space-between;">
+									<input type="text" class="placeholder-left input-unlabeled text-left" style="min-width:150px;" placeholder="Input Name" id="effect5-name">
+									<div class="label" style="margin-right:-4px;">Visibility:</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-visibility" id="effect5-showcheck">
+										<div class="label">Show</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-visibility" id="effect5-hidecheck">
+										<div class="label">Hide</div>
+									</div>
+									<div class="label" style="margin-right:-4px;">| Expend:</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-expend" id="effect5-actioncheck">
+										<div class="label">Action</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-expend" id="effect5-rollcheck">
+										<div class="label">Roll</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-expend" id="effect5-oncecheck1">
+										<div class="label">Once</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-expend" id="effect5-disablecheck">
+										<div class="label">Disable</div>
+									</div>
+								</div>
+								<!-- Duration Row -->
+								<div id="effect5-durationrow" style="display:flex; flex-wrap:nowrap; align-items:center; justify-content:space-between;">
+									<div class="label">Duration:&nbsp;</div>
+									<div style="display:flex; align-items:center;">
+										<div class="label">Dice</div>
+										<input type="text" class="input-unlabeled" style="width:100px; flex:1;" placeholder="Dice" id="effect5-dice">
+									</div>
+									<div style="display:flex; align-items:center;">
+										<div class="label" style="margin-left:2px">Mod</div>
+										<input type="text" class="input-unlabeled" style="width:25px; flex:1;" placeholder="#" id="effect5-mod">
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-durationgroup" id="effect5-roundscheck">
+										<div class="label">Round(s)</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-durationgroup" id="effect5-minutescheck">
+										<div class="label">Minute(s)</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-durationgroup" id="effect5-hourscheck">
+										<div class="label">Hour(s)</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-durationgroup" id="effect5-dayscheck">
+										<div class="label">Day(s)&nbsp;&nbsp;&nbsp;|</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="checkbox" id="effect5-auracheck">
+										<div class="label">Aura</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="checkbox" id="effect5-notecheck">
+										<div class="label">Notes</div>
+									</div>
+								</div>
+								<!-- Change Row -->
+								<div id="effect5-changerow" style="display:flex; flex-wrap:nowrap; align-items:center; justify-content:space-between;">
+									<div class="label" style="margin-right:-4px;">Change State:&nbsp;&nbsp;</div>
+									<div class="label" style="margin-right:-4px;">Actor:</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-change" id="effect5-anycheck">
+										<div class="label">Any</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-change" id="effect5-targetcheck">
+										<div class="label">Target</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-change" id="effect5-sourcecheck">
+										<div class="label">Source&nbsp;|</div>
+									</div>
+									<div class="label" style="margin-right:-4px;">Time:</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-time" id="effect5-startcheck">
+										<div class="label">Start</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-time" id="effect5-endcheck">
+										<div class="label">End&nbsp;|</div>
+									</div>
+									<div class="label" style="margin-right:-4px;">Apply:</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-apply" id="effect5-activatecheck">
+										<div class="label">Activate</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-apply" id="effect5-deactivatecheck">
+										<div class="label">Deactivate</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-apply" id="effect5-removecheck">
+										<div class="label">Remove</div>
+									</div>
+								</div>
+								<!-- Target Row -->
+								<div id="effect5-targetrow" style="display:flex; flex-wrap:nowrap; align-items:center; justify-content:space-between;">
+									<div class="label" style="margin-right:-4px;">Target:</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-targetgroup" id="effect5-allcheck">
+										<div class="label">All</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-targetgroup" id="effect5-friendcheck">
+										<div class="label">Friend</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-targetgroup" id="effect5-foecheck">
+										<div class="label">Foe</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-targetgroup" id="effect5-allycheck">
+										<div class="label">Ally</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-targetgroup" id="effect5-enemycheck">
+										<div class="label">Enemy</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-targetgroup" id="effect5-neutralcheck">
+										<div class="label">Neutral</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-targetgroup" id="effect5-nonecheck">
+										<div class="label">None</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="checkbox" id="effect5-notcheck">
+										<div class="label">Not&nbsp;&nbsp;&nbsp;|</div>
+									</div>
+									<div class="label">Distance:</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-distance" id="effect5-meleecheck">
+										<div class="label">Melee</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-distance" id="effect5-rangecheck">
+										<div class="label">Range</div>
+									</div>
+								</div>
+								<!-- Save Mod Row -->
+								<div style="display:flex; flex-wrap:nowrap; align-items:center;">
+									<div class="label" style="margin-right:-4px;">Effect:</div>
+									<div style="display:flex; align-items:center;">
+										<input type="checkbox" id="effect5-oncecheck2">
+										<div class="label">Once</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="checkbox" id="effect5-cubecheck">
+										<div class="label">Cube</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="checkbox" id="effect5-stickycheck">
+										<div class="label">Sticky&nbsp;&nbsp;</div>
+									</div>
+									<div style="display:flex; align-items:center; flex:1;">
+										<div class="label">Custom:</div>
+										<input type="text" class="input-unlabeled" style="width:75px; flex:1;" placeholder="Custom Effect" id="effect5-customeffect">
+									</div>
+									<div class="label">|&nbsp;Save Mod:</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-modifier" id="effect5-strcheck">
+										<div class="label">Str</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-modifier" id="effect5-dexcheck">
+										<div class="label">Dex</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-modifier" id="effect5-concheck">
+										<div class="label">Con</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-modifier" id="effect5-intcheck">
+										<div class="label">Int</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-modifier" id="effect5-wischeck">
+										<div class="label">Wis</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect5-modifier" id="effect5-chacheck">
+										<div class="label">Cha</div>
+									</div>
+								</div>
+								<!-- Damage Row -->
+								<div id="effect5-damagerow" style="display:flex; flex-wrap:nowrap; align-items:flex-end; justify-content:space-between;">
+									<div style="display:flex; flex-direction:column; align-items:center;">
+										<div class="label" style="width:30px;">Range</div>
+										<input type="text" class="input-unlabeled" style="width:30px;" placeholder="Range" id="effect5-range">
+									</div>
+									<div style="display:flex; flex-direction:column; align-items:center;">
+										<div class="label" style="width:50px;">Dmg1</div>
+										<input type="text" class="input-unlabeled" style="width:50px;" placeholder="Dmg1" id="effect5-dmg1">
+									</div>
+									<div style="transform:scale(0.7); margin:0px -2px -4px -2px; display:flex; flex-direction:column; align-items:center;">
+										<div class="label">Mod</div>
+										<input type="checkbox" id="effect5-modcheck1" style="margin:5px auto;">
+									</div>
+									<div style="display:flex; flex-direction:column; align-items:center;">
+										<div class="label" style="width:75px;">Type1</div>
+										<input type="text" class="input-unlabeled" style="width:75px;" placeholder="Type1" id="effect5-type1">
+									</div>
+									<div style="display:flex; flex-direction:column; align-items:center;">
+										<div class="label" style="width:50px;">Dmg2</div>
+										<input type="text" class="input-unlabeled" style="width:50px;" placeholder="Dmg2" id="effect5-dmg2">
+									</div>
+									<div style="transform:scale(0.7); margin:0px -2px -4px -2px; display:flex; flex-direction:column; align-items:center;">
+										<div class="label">Mod</div>
+										<input type="checkbox" id="effect5-modcheck2" style="margin:5px auto;">
+									</div>
+									<div style="display:flex; flex-direction:column; align-items:center;">
+										<div class="label" style="width:75px;">Type2</div>
+										<input type="text" class="input-unlabeled" style="width:75px;" placeholder="Type2" id="effect5-type2">
+									</div>
+									<div style="display:flex; flex-direction:column; align-items:center;">
+										<div class="label" style="width:75px;">Save Vs</div>
+										<input type="text" class="input-unlabeled" style="width:75px;" placeholder="Type2" id="effect5-savevs">
+									</div>
+									<div style="display:flex; flex-direction:column; align-items:center;">
+										<div class="label">Condition</div>
+										<input type="text" class="input-unlabeled" style="width:75px;" placeholder="Condition" id="effect5-condition">
+									</div>
+									<div style="display:flex; flex-direction:column; align-items:center; margin-left:2px;">
+										<div class="label">Condition End</div>
+										<input type="text" class="input-unlabeled" style="width:100%;" placeholder="Condition End" id="effect5-conditionend">
+									</div>
+								</div>
+								<!-- Notes Row -->
+								<div id="effect5-notesrow" style="display:flex; flex-wrap:nowrap; align-items:flex-end; gap:5px; display:none;">
+									<div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+										<div class="label">Note1</div>
+										<input type="text" class="input-unlabeled" style="width:100%;" placeholder="Note1" id="effect5-note1">
+									</div>
+									<div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+										<div class="label">Note2</div>
+										<input type="text" class="input-unlabeled" style="width:100%;" placeholder="Note2" id="effect5-note2">
+									</div>
+									<div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+										<div class="label">Note3</div>
+										<input type="text" class="input-unlabeled" style="width:100%;" placeholder="Note3" id="effect5-note3">
+									</div>
+								</div>
+								<!-- Parse Button Row -->
+								<div id="effect5-parsebtnrow" style="display:flex; flex-wrap:nowrap; justify-content:space-between; gap:4px; padding:3px 0;">
+									<button class="parseBtn" id="effect5-parserange">Range</button>
+									<button class="parseBtn" id="effect5-parsedmg1">Damage 1</button>
+									<button class="parseBtn" id="effect5-parsedmg2">Damage 2</button>
+									<button class="parseBtn" id="effect5-parsesavevs">Save Vs</button>
+									<button class="parseBtn" id="effect5-parsesdc">SDC</button>
+									<button class="parseBtn" id="effect5-parsemeleerange">Melee/Range</button>
+									<button class="parseBtn" id="effect5-parsecondition">Condition</button>
+									<button class="parseBtn" id="effect5-parseconditionend">Condition End</button>
+									<button class="parseBtn" id="effect5-parsenote1">Note 1</button>
+									<button class="parseBtn" id="effect5-parsenote2">Note 2</button>
+									<button class="parseBtn" id="effect5-parsenote3">Note 3</button>
+								</div>
+								<!-- Descriptions -->
+								<div id="effect5-descriptions" style="display:flex; flex-direction:column;">
+									<textarea class="input-unlabeled text-left placeholder-left" style="width:calc(100% - 3px); height:65px; resize:none; box-sizing:border-box; padding:5px 5px 0 5px;" placeholder="Description" id="effect5-description"></textarea>
+									<textarea class="input-unlabeled text-left placeholder-left" style="width:calc(100% - 3px); height:65px; resize:none; box-sizing:border-box; padding:5px 5px 0 5px;" placeholder="Stylized Description" id="effect5-stylized" readonly></textarea>
+								</div>
+							</div>
+							<!-- effect6 -->
+							<div id="effect6" class="sub-container" style="display:none;">
+								<!-- Name Row -->
+								<div id="effect6-namerow" style="display:flex; flex-wrap:nowrap; align-items:center; justify-content:space-between;">
+									<input type="text" class="placeholder-left input-unlabeled text-left" style="min-width:150px;" placeholder="Input Name" id="effect6-name">
+									<div class="label" style="margin-right:-4px;">Visibility:</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-visibility" id="effect6-showcheck">
+										<div class="label">Show</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-visibility" id="effect6-hidecheck">
+										<div class="label">Hide</div>
+									</div>
+									<div class="label" style="margin-right:-4px;">| Expend:</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-expend" id="effect6-actioncheck">
+										<div class="label">Action</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-expend" id="effect6-rollcheck">
+										<div class="label">Roll</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-expend" id="effect6-oncecheck1">
+										<div class="label">Once</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-expend" id="effect6-disablecheck">
+										<div class="label">Disable</div>
+									</div>
+								</div>
+								<!-- Duration Row -->
+								<div id="effect6-durationrow" style="display:flex; flex-wrap:nowrap; align-items:center; justify-content:space-between;">
+									<div class="label">Duration:&nbsp;</div>
+									<div style="display:flex; align-items:center;">
+										<div class="label">Dice</div>
+										<input type="text" class="input-unlabeled" style="width:100px; flex:1;" placeholder="Dice" id="effect6-dice">
+									</div>
+									<div style="display:flex; align-items:center;">
+										<div class="label" style="margin-left:2px">Mod</div>
+										<input type="text" class="input-unlabeled" style="width:25px; flex:1;" placeholder="#" id="effect6-mod">
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-durationgroup" id="effect6-roundscheck">
+										<div class="label">Round(s)</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-durationgroup" id="effect6-minutescheck">
+										<div class="label">Minute(s)</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-durationgroup" id="effect6-hourscheck">
+										<div class="label">Hour(s)</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-durationgroup" id="effect6-dayscheck">
+										<div class="label">Day(s)&nbsp;&nbsp;&nbsp;|</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="checkbox" id="effect6-auracheck">
+										<div class="label">Aura</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="checkbox" id="effect6-notecheck">
+										<div class="label">Notes</div>
+									</div>
+								</div>
+								<!-- Change Row -->
+								<div id="effect6-changerow" style="display:flex; flex-wrap:nowrap; align-items:center; justify-content:space-between;">
+									<div class="label" style="margin-right:-4px;">Change State:&nbsp;&nbsp;</div>
+									<div class="label" style="margin-right:-4px;">Actor:</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-change" id="effect6-anycheck">
+										<div class="label">Any</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-change" id="effect6-targetcheck">
+										<div class="label">Target</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-change" id="effect6-sourcecheck">
+										<div class="label">Source&nbsp;|</div>
+									</div>
+									<div class="label" style="margin-right:-4px;">Time:</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-time" id="effect6-startcheck">
+										<div class="label">Start</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-time" id="effect6-endcheck">
+										<div class="label">End&nbsp;|</div>
+									</div>
+									<div class="label" style="margin-right:-4px;">Apply:</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-apply" id="effect6-activatecheck">
+										<div class="label">Activate</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-apply" id="effect6-deactivatecheck">
+										<div class="label">Deactivate</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-apply" id="effect6-removecheck">
+										<div class="label">Remove</div>
+									</div>
+								</div>
+								<!-- Target Row -->
+								<div id="effect6-targetrow" style="display:flex; flex-wrap:nowrap; align-items:center; justify-content:space-between;">
+									<div class="label" style="margin-right:-4px;">Target:</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-targetgroup" id="effect6-allcheck">
+										<div class="label">All</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-targetgroup" id="effect6-friendcheck">
+										<div class="label">Friend</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-targetgroup" id="effect6-foecheck">
+										<div class="label">Foe</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-targetgroup" id="effect6-allycheck">
+										<div class="label">Ally</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-targetgroup" id="effect6-enemycheck">
+										<div class="label">Enemy</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-targetgroup" id="effect6-neutralcheck">
+										<div class="label">Neutral</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-targetgroup" id="effect6-nonecheck">
+										<div class="label">None</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="checkbox" id="effect6-notcheck">
+										<div class="label">Not&nbsp;&nbsp;&nbsp;|</div>
+									</div>
+									<div class="label">Distance:</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-distance" id="effect6-meleecheck">
+										<div class="label">Melee</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-distance" id="effect6-rangecheck">
+										<div class="label">Range</div>
+									</div>
+								</div>
+								<!-- Save Mod Row -->
+								<div style="display:flex; flex-wrap:nowrap; align-items:center;">
+									<div class="label" style="margin-right:-4px;">Effect:</div>
+									<div style="display:flex; align-items:center;">
+										<input type="checkbox" id="effect6-oncecheck2">
+										<div class="label">Once</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="checkbox" id="effect6-cubecheck">
+										<div class="label">Cube</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="checkbox" id="effect6-stickycheck">
+										<div class="label">Sticky&nbsp;&nbsp;</div>
+									</div>
+									<div style="display:flex; align-items:center; flex:1;">
+										<div class="label">Custom:</div>
+										<input type="text" class="input-unlabeled" style="width:75px; flex:1;" placeholder="Custom Effect" id="effect6-customeffect">
+									</div>
+									<div class="label">|&nbsp;Save Mod:</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-modifier" id="effect6-strcheck">
+										<div class="label">Str</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-modifier" id="effect6-dexcheck">
+										<div class="label">Dex</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-modifier" id="effect6-concheck">
+										<div class="label">Con</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-modifier" id="effect6-intcheck">
+										<div class="label">Int</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-modifier" id="effect6-wischeck">
+										<div class="label">Wis</div>
+									</div>
+									<div style="display:flex; align-items:center;">
+										<input type="radio" name="effect6-modifier" id="effect6-chacheck">
+										<div class="label">Cha</div>
+									</div>
+								</div>
+								<!-- Damage Row -->
+								<div id="effect6-damagerow" style="display:flex; flex-wrap:nowrap; align-items:flex-end; justify-content:space-between;">
+									<div style="display:flex; flex-direction:column; align-items:center;">
+										<div class="label" style="width:30px;">Range</div>
+										<input type="text" class="input-unlabeled" style="width:30px;" placeholder="Range" id="effect6-range">
+									</div>
+									<div style="display:flex; flex-direction:column; align-items:center;">
+										<div class="label" style="width:50px;">Dmg1</div>
+										<input type="text" class="input-unlabeled" style="width:50px;" placeholder="Dmg1" id="effect6-dmg1">
+									</div>
+									<div style="transform:scale(0.7); margin:0px -2px -4px -2px; display:flex; flex-direction:column; align-items:center;">
+										<div class="label">Mod</div>
+										<input type="checkbox" id="effect6-modcheck1" style="margin:5px auto;">
+									</div>
+									<div style="display:flex; flex-direction:column; align-items:center;">
+										<div class="label" style="width:75px;">Type1</div>
+										<input type="text" class="input-unlabeled" style="width:75px;" placeholder="Type1" id="effect6-type1">
+									</div>
+									<div style="display:flex; flex-direction:column; align-items:center;">
+										<div class="label" style="width:50px;">Dmg2</div>
+										<input type="text" class="input-unlabeled" style="width:50px;" placeholder="Dmg2" id="effect6-dmg2">
+									</div>
+									<div style="transform:scale(0.7); margin:0px -2px -4px -2px; display:flex; flex-direction:column; align-items:center;">
+										<div class="label">Mod</div>
+										<input type="checkbox" id="effect6-modcheck2" style="margin:5px auto;">
+									</div>
+									<div style="display:flex; flex-direction:column; align-items:center;">
+										<div class="label" style="width:75px;">Type2</div>
+										<input type="text" class="input-unlabeled" style="width:75px;" placeholder="Type2" id="effect6-type2">
+									</div>
+									<div style="display:flex; flex-direction:column; align-items:center;">
+										<div class="label" style="width:75px;">Save Vs</div>
+										<input type="text" class="input-unlabeled" style="width:75px;" placeholder="Type2" id="effect6-savevs">
+									</div>
+									<div style="display:flex; flex-direction:column; align-items:center;">
+										<div class="label">Condition</div>
+										<input type="text" class="input-unlabeled" style="width:75px;" placeholder="Condition" id="effect6-condition">
+									</div>
+									<div style="display:flex; flex-direction:column; align-items:center; margin-left:2px;">
+										<div class="label">Condition End</div>
+										<input type="text" class="input-unlabeled" style="width:100%;" placeholder="Condition End" id="effect6-conditionend">
+									</div>
+								</div>
+								<!-- Notes Row -->
+								<div id="effect6-notesrow" style="display:flex; flex-wrap:nowrap; align-items:flex-end; gap:5px; display:none;">
+									<div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+										<div class="label">Note1</div>
+										<input type="text" class="input-unlabeled" style="width:100%;" placeholder="Note1" id="effect6-note1">
+									</div>
+									<div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+										<div class="label">Note2</div>
+										<input type="text" class="input-unlabeled" style="width:100%;" placeholder="Note2" id="effect6-note2">
+									</div>
+									<div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+										<div class="label">Note3</div>
+										<input type="text" class="input-unlabeled" style="width:100%;" placeholder="Note3" id="effect6-note3">
+									</div>
+								</div>
+								<!-- Parse Button Row -->
+								<div id="effect6-parsebtnrow" style="display:flex; flex-wrap:nowrap; justify-content:space-between; gap:4px; padding:3px 0;">
+									<button class="parseBtn" id="effect6-parserange">Range</button>
+									<button class="parseBtn" id="effect6-parsedmg1">Damage 1</button>
+									<button class="parseBtn" id="effect6-parsedmg2">Damage 2</button>
+									<button class="parseBtn" id="effect6-parsesavevs">Save Vs</button>
+									<button class="parseBtn" id="effect6-parsesdc">SDC</button>
+									<button class="parseBtn" id="effect6-parsemeleerange">Melee/Range</button>
+									<button class="parseBtn" id="effect6-parsecondition">Condition</button>
+									<button class="parseBtn" id="effect6-parseconditionend">Condition End</button>
+									<button class="parseBtn" id="effect6-parsenote1">Note 1</button>
+									<button class="parseBtn" id="effect6-parsenote2">Note 2</button>
+									<button class="parseBtn" id="effect6-parsenote3">Note 3</button>
+								</div>
+								<!-- Descriptions -->
+								<div id="effect6-descriptions" style="display:flex; flex-direction:column;">
+									<textarea class="input-unlabeled text-left placeholder-left" style="width:calc(100% - 3px); height:65px; resize:none; box-sizing:border-box; padding:5px 5px 0 5px;" placeholder="Description" id="effect6-description"></textarea>
+									<textarea class="input-unlabeled text-left placeholder-left" style="width:calc(100% - 3px); height:65px; resize:none; box-sizing:border-box; padding:5px 5px 0 5px;" placeholder="Stylized Description" id="effect6-stylized" readonly></textarea>
+								</div>
+							</div>
 						</div>
 					</div>	
 				</div>
@@ -9880,3 +10430,4 @@
 		<script src="Scripts/Theme.js"></script>
 	</body>
 </html>
+
